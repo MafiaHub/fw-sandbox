@@ -44,7 +44,7 @@ int main(void) {
 
                 // TODO: scale vector to avoid faster diagonal movement
                 // TODO: promote to Player::Move(x_axis,y_axis)
-                constexpr float speed = 0.23f;
+                constexpr float speed = 0.063f;
                 player.AddForce({x_axis*speed, 0.0f, y_axis*speed});
             }
             // 2. Update all game actors
@@ -53,8 +53,14 @@ int main(void) {
                 player.Update();
 
                 // TODO: Design a Camera class with Camera::Follow() and Camera::Update() methods
-                const auto pos  = ConvertVector3(player.GetPosition());
-                camera.target = pos;
+                auto pos  = ConvertVector3(player.GetPosition());
+                auto tgt = pos;
+                pos.y += 15.0f;
+                pos.z += 25.0f;
+                camera.position = pos;
+
+                tgt.z += 5.0f;
+                camera.target = tgt;
             }
 
             // 3. Draw the scene
