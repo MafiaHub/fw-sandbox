@@ -1,5 +1,5 @@
 {
-    "name": "test",
-    "version": "1.0.0",
-    "entry_point": "index.js"
+	"name": "test",
+	"version": "1.0.0",
+	"entry_point": "index.js"
 }
