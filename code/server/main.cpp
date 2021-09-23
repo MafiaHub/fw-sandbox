@@ -16,8 +16,7 @@ int main() {
         return 1;
     }
 
-    while (server.IsAlive())
-        server.Update();
+    server.Run();
 
     server.Shutdown();
     return 0;
