@@ -13,8 +13,6 @@ ATOM MyRegisterClass(HINSTANCE hInstance);
 BOOL InitInstance(HINSTANCE, int);
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 
-#undef main
-
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPWSTR lpCmdLine, _In_ int nCmdShow) {
     BOOL dpi_success = SetProcessDpiAwarenessContext(DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2);
     assert(dpi_success);
@@ -34,7 +32,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance
     
     // just show some basic info:
     application.infoDisplay.active     = true;
-    application.infoDisplay.watermark  = true;
+    application.infoDisplay.watermark  = false;
     application.infoDisplay.resolution = true;
     application.infoDisplay.fpsinfo    = true;
 
