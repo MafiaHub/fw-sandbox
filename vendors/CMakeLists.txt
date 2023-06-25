@@ -1,1 +1,5 @@
-add_subdirectory(raylib)
+
+set(WICKED_IMGUI_EXAMPLE OFF)
+set(WICKED_LINUX_TEMPLATE OFF)
+set(WICKED_TESTS OFF)
+add_subdirectory(wicked)
