@@ -1,0 +1,10 @@
+#define SANDBOX_GIT_VERSION_LONG "@SANDBOX_GIT_VERSION_LONG@"
+#define SANDBOX_GIT_VERSION "@SANDBOX_GIT_VERSION@"
+#define SANDBOX_VERSION      "@SANDBOX_VERSION@"
+
+
+namespace Sandbox::Version {
+    const char *git = SANDBOX_GIT_VERSION;
+    const char *gitLong = SANDBOX_GIT_VERSION_LONG;
+    const char *rel = SANDBOX_VERSION;
+};

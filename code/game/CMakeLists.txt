@@ -1,5 +1,7 @@
 set(SANDBOX_SRC_FILES
     main.cpp
+
+    ${CMAKE_BINARY_DIR}/sandbox_version.cpp
 )
 
 add_executable(SandboxGame WIN32 ${SANDBOX_SRC_FILES})
