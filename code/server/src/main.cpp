@@ -1,4 +1,4 @@
-#include "server.h"
+#include "core/server.h"
 
 int main(int argc, char **argv) {
     Framework::Integrations::Server::InstanceOptions opts;
